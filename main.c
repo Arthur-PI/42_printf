@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 18:45:09 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/05 16:36:23 by apigeon          ###   ########.fr       */
+/*   Created: 2021/12/02 18:37:00 by apigeon           #+#    #+#             */
+/*   Updated: 2021/12/05 16:41:45 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	main(void)
 {
-	(void)format;
-	ft_putstr_fd("oui\n", 1);
+	ft_printf("wgawgwag");
 	return (0);
 }
