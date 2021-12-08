@@ -6,7 +6,7 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:37:00 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/05 16:41:45 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/08 17:17:33 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int	main(void)
 {
 	ft_printf("wgawgwag");
+	ft_putstr_fd("oui la string la\n", 1);
 	return (0);
 }

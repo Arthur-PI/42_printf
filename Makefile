@@ -25,15 +25,14 @@ $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
 		$(CC) $(CFLAGS) -I$(LIBFT_PATH) -o $@ -c $<
 
 libft.a:
-		make bonus -C $(LIBFT_PATH)
-		cp $(LIBFT_PATH)/libft.a ./
+		make -C $(LIBFT_PATH)
+		cp $(LIBFT_PATH)/libft.a ./$(NAME)
 
 $(NAME):		libft.a $(OBJ_DIR) $(OBJS)
-		ar rc $(NAME) $(OBJS) libft.a
+		ar rc $(NAME) $(OBJS)
 
 clean:
 		rm -rf $(OBJ_DIR)
-		rm -rf libft.a
 
 fclean:			clean
 		rm -rf $(NAME)
