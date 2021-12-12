@@ -6,15 +6,18 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:37:00 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/08 17:17:33 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/12 17:14:41 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int	main(void)
 {
-	ft_printf("wgawgwag");
-	ft_putstr_fd("oui la string la\n", 1);
+	char *s;
+
+	s = NULL;
+	ft_printf(" NULL %s NULL ", s);
 	return (0);
 }

@@ -6,13 +6,14 @@ OBJ_DIR	=	bin/
 
 CC		=	cc
 
-CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -g3 -fsanitize=address
+LIBFT_PATH	=	libft
+
+CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -I$(LIBFT_PATH) #-g3 -fsanitize=address
 
 NAME	=	libftprintf.a
 
-LIBFT_PATH	=	libft
-
 SRCS	=	ft_printf.c \
+			buffer_handler.c \
 
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
@@ -22,7 +23,7 @@ $(OBJ_DIR):
 		mkdir -p $@
 
 $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
-		$(CC) $(CFLAGS) -I$(LIBFT_PATH) -o $@ -c $<
+		$(CC) $(CFLAGS) -o $@ -c $<
 
 libft.a:
 		make -C $(LIBFT_PATH)
