@@ -26,7 +26,7 @@ $(OBJ_DIR)%.o:	$(SRC_DIR)%.c
 		$(CC) $(CFLAGS) -o $@ -c $<
 
 libft.a:
-		make -C $(LIBFT_PATH)
+		make bonus -C $(LIBFT_PATH)
 		cp $(LIBFT_PATH)/libft.a ./$(NAME)
 
 $(NAME):		libft.a $(OBJ_DIR) $(OBJS)

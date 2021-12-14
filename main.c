@@ -6,7 +6,7 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:37:00 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/13 10:54:47 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/14 11:18:10 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 int	main(void)
 {
-	int	res;
-	int	*p;
+	int		res1;
+	int		res2;
 
-	p = &res;
-	res = printf("%p", p);
-	printf("\nres = %d\n", res);
+	char *p = "wagawga";
+	res1 = printf("%p", p);
+	putchar('\n');
+	res2 = ft_printf("%p", p);
+	printf("\nres1 = %d; res2 = %d\n", res1, res2);
 	return (0);
 }
