@@ -6,7 +6,7 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:37:00 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/12 17:14:41 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/13 10:54:47 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 int	main(void)
 {
-	char *s;
+	int	res;
+	int	*p;
 
-	s = NULL;
-	ft_printf(" NULL %s NULL ", s);
+	p = &res;
+	res = printf("%p", p);
+	printf("\nres = %d\n", res);
 	return (0);
 }
