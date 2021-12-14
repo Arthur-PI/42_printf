@@ -14,6 +14,11 @@ NAME	=	libftprintf.a
 
 SRCS	=	ft_printf.c \
 			buffer_handler.c \
+			option_pointer.c \
+			option_number.c \
+			option_string.c \
+			option_char.c \
+			option_hex.c \
 
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 

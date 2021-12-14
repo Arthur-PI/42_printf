@@ -6,7 +6,7 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:20:06 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/14 11:13:16 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/14 16:06:49 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "libft.h"
 # include <stdarg.h>
-
 
 # include <stdio.h>
 
@@ -35,6 +34,15 @@
 # define O_HEXMAJ 'X'
 # define O_PERCENT '%'
 
+
+# define FLAGS "-0.# +"
+# define F_MINUS '-'
+# define F_ZERO '0'
+# define F_POINT '.'
+# define F_HASH '#'
+# define F_SPACE ' '
+# define F_PLUS '+'
+
 # define CAPS 1
 # define NO_CAPS 0
 
@@ -49,8 +57,26 @@
 #  define INT_MAX 2147483647
 # endif
 
+typedef struct s_flags {
+	char	fminus;
+	char	fzero;
+	char	fpoint;
+	char	fhash;
+	char	fspace;
+	char	fplus;
+	int		flength;
+}				t_flags;
+
 int		ft_printf(const char *format, ...);
 int		buffer_manip(char *s, char option);
 void	buffer_manip_char(char c, char option);
+
+void	option_pointer(void *p);
+void	option_int(int n);
+void	option_uint(unsigned int n);
+void	option_hex(unsigned int n);
+void	option_hexcaps(unsigned int n);
+void	option_char(int c);
+void	option_string(char *s);
 
 #endif
