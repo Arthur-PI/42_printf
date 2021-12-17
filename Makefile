@@ -6,9 +6,13 @@ OBJ_DIR	=	bin/
 
 CC		=	cc
 
+AR		=	ar rc
+
+RM		=	rm -rf
+
 LIBFT_PATH	=	libft
 
-CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -I$(LIBFT_PATH) #-g3 -fsanitize=address
+CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -I$(LIBFT_PATH) -g3 #-fsanitize=address
 
 NAME	=	libftprintf.a
 
@@ -35,13 +39,13 @@ libft.a:
 		cp $(LIBFT_PATH)/libft.a ./$(NAME)
 
 $(NAME):		libft.a $(OBJ_DIR) $(OBJS)
-		ar rc $(NAME) $(OBJS)
+		$(AR) $(NAME) $(OBJS)
 
 clean:
-		rm -rf $(OBJ_DIR)
+		$(RM) $(OBJ_DIR)
 
 fclean:			clean
-		rm -rf $(NAME)
+		$(RM) $(NAME)
 
 re:				fclean all
 

@@ -6,7 +6,7 @@
 /*   By: apigeon <apigeon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 15:15:58 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/14 15:59:46 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/14 16:33:21 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	tohexa_pointer(size_t addr)
 {
-	char *base16;
+	char	*base16;
 
 	base16 = BASE16;
 	if (addr < 16)
