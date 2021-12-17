@@ -12,7 +12,7 @@ RM		=	rm -rf
 
 LIBFT_PATH	=	libft
 
-CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -I$(LIBFT_PATH) -g3 #-fsanitize=address
+CFLAGS	=	-Wall -Werror -Wextra -I$(DEP_DIR) -I$(LIBFT_PATH) #-g3 -fsanitize=address
 
 NAME	=	libftprintf.a
 

@@ -6,28 +6,11 @@
 /*   By: apigeon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:08:02 by apigeon           #+#    #+#             */
-/*   Updated: 2021/12/14 10:39:34 by apigeon          ###   ########.fr       */
+/*   Updated: 2021/12/17 11:14:27 by apigeon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*static char	*concat(char *s1, char *s2)
-{
-	int		size;
-	int		s1_size;
-	char	*res;
-
-	s1_size = ft_strlen(s1);
-	size = s1_size + ft_strlen(s2);
-	res = malloc(size + 1);
-	if (!res)
-		return (NULL);
-	ft_strlcpy(res, s1, size + 1);
-	ft_strlcpy(res + s1_size, s2, size + 1);
-	free(s1);
-	return (res);
-}*/
 
 int	max(int a, int b)
 {
@@ -62,7 +45,7 @@ int	buffer_manip(char *s, char option)
 	{
 		if (!s)
 			s = "(null)";
-		if (s[0] != 0 || option & CHAR)
+		if (s[0] || option & CHAR)
 			ft_lstadd_back(&buffer, ft_lstnew(ft_strdup(s)));
 		if (option & FREE)
 			free(s);
